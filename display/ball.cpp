@@ -8,7 +8,21 @@
 #include "ball.h"
 
 GLfloat ballPosition[3] = {0, 0, 1.5};
+GLfloat ballPositionInitial[3] = {0, 0, 1.5};
+GLfloat ballVelocity[] = {0, 0, 0.04};
+
 double ballSize = 0.05, coneAngleX = 0, coneAngleY = 0;
+
+void resetBall() {
+	for(int i = 0; i < 3; i++)
+		ballPosition[i] = ballPositionInitial[i];
+}
+
+void pushBall() {
+	ballVelocity[0] = 0.04*sin(PI*coneAngleY/180);
+	ballVelocity[1] = -0.04*sin(PI*coneAngleX/180);
+	ballVelocity[2] = 0.04*cos(PI*coneAngleY/180);
+}
 
 void drawBall() {
 	glPushMatrix();

@@ -7,8 +7,8 @@
 
 #include "animate.h"
 
-GLfloat ballVelocity[] = {0, 0, 0.04};
 int gameState = 0;
+bool scoring = false;
 
 void animation(int value) {
 	if(gameState != 1)
@@ -38,6 +38,6 @@ void animation(int value) {
 
 	glutPostRedisplay();
 
-	glutTimerFunc(16, animation, value);
+	glutTimerFunc(value, animation, value);
 }
 

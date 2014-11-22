@@ -7,17 +7,24 @@
 
 #include "keyboard.h"
 
-#define PI 3.14159265
 
 void keyboardFunction(unsigned char c, int x, int y) {
 	switch(c) {
 	case ' ':
 		if(gameState == 0) {
 			gameState = 1;
-			ballVelocity[0] = 0.04*sin(PI*coneAngleY/180);
-			ballVelocity[1] = -0.04*sin(PI*coneAngleX/180);
-			ballVelocity[2] = 0.04*cos(PI*coneAngleY/180);
-			glutTimerFunc(16, animation, 0);
+			pushBall();
+			glutTimerFunc(16, animation, 16);
+		}
+		break;
+	case 'r':
+	case 'R':
+		if(gameState == 2) {
+			gameState = 1;
+			resetCamera();
+			resetBall();
+			pushBall();
+			glutTimerFunc(64, animation, 64);
 		}
 		break;
 	}

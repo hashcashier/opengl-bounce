@@ -18,9 +18,13 @@ void keyboardFunction(unsigned char c, int x, int y);
 void keystrokeFunction(int key, int x, int y);
 
 extern void animation(int value);
+extern void resetCamera();
+extern void resetBall();
+extern void pushBall();
 
-extern GLfloat cameraEye[], cameraCenter[], ballVelocity[];
 extern int gameState;
 extern double coneAngleX, coneAngleY;
+extern bool scoring;
+
 
 #endif /* KEYBOARD_H_ */

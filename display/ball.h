@@ -14,13 +14,14 @@ using namespace std;
 #ifndef BALL_H_
 #define BALL_H_
 
-extern GLfloat ballPosition[];
-extern double ballSize, coneAngleX, coneAngleY;
+#define PI 3.14159265
 
+extern GLfloat ballPosition[], ballPositionInitial[], ballVelocity[];
+extern double ballSize, coneAngleX, coneAngleY;
 
 void drawBall();
 void drawCone();
-
-
+void resetBall();
+void pushBall();
 
 #endif /* BALL_H_ */

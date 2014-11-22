@@ -16,7 +16,9 @@ using namespace std;
 #define CAMERA_H_
 
 extern GLfloat cameraEye[3], cameraCenter[3], cameraUp[3];
+extern GLfloat cameraEyeInitial[3], cameraCenterInitial[3];
 
 void setupCamera();
+void resetCamera();
 
 #endif /* CAMERA_H_ */

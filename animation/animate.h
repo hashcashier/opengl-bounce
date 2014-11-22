@@ -19,5 +19,6 @@ extern GLfloat cameraEye[3], cameraCenter[3], cameraUp[3];
 extern GLfloat ballVelocity[3], ballPosition[3];
 extern int gameState, depth;
 extern double cubeSize, ballSize;
+extern bool scoring;
 
 #endif /* ANIMATE_H_ */

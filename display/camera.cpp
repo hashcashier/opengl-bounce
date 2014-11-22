@@ -7,9 +7,18 @@
 
 #include "camera.h"
 
+GLfloat cameraEyeInitial[3] = {-0.25, 0, 0},
+		cameraCenterInitial[3] = {0, 0, 1};
+
 GLfloat cameraEye[3] = {-0.25, 0, 0},
 		cameraCenter[3] = {0, 0, 1},
 		cameraUp[3] = {0, 1, 0};
+
+void resetCamera() {
+	for(int i = 0; i < 3; i++)
+		cameraEye[i] = cameraEyeInitial[i],
+		cameraCenter[i] = cameraCenterInitial[i];
+}
 
 void setupCamera() {
 	glMatrixMode(GL_PROJECTION);
