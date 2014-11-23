@@ -16,7 +16,7 @@ using namespace std;
 
 extern double coneAngleX, coneAngleY;
 extern GLfloat cameraEye[3], cameraCenter[3], cameraUp[3];
-extern int score, scoreLast, scoreRound, cameraMode, gameState;
+extern int score, scoreLast, scoreRound, cameraMode, gameState, roundNumber;
 
 void displayAngles();
 void printText(double x, double y, string text, int r, int g, int b);

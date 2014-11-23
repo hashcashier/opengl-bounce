@@ -7,6 +7,8 @@
 
 #include "hud.h"
 
+int roundNumber = 1;
+
 void displayAngles() {
 	ostringstream ossA, ossB;
 	ossA << "YZ-Plane Angle: " << coneAngleY;
@@ -18,7 +20,7 @@ void displayAngles() {
 void displayScores() {
 	ostringstream ossA, ossB, ossC;
 	ossA << "Total Score: " << score;
-	ossB << "Round Score: " << scoreRound;
+	ossB << "Round " << roundNumber << " Score: " << scoreRound;
 	ossC << "Last Score: " << scoreLast;
 	printText(0.4, 0.3, ossA.str(), 255, 255, 0);
 	printText(0.4, 0.25, ossB.str(), 255, 255, 0);

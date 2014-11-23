@@ -32,6 +32,7 @@ void keyboardFunction(unsigned char c, int x, int y) {
 	case 'n':
 	case 'N':
 		if(gameState == 2) {
+			roundNumber++;
 			gameState = 0;
 			resetCamera();
 			resetBall();
