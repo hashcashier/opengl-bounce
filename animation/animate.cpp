@@ -31,10 +31,14 @@ void animation(int value) {
 	cameraCenter[2] += ballVelocity[2];
 
 	for(int i = 0; i < 2; i++)
-		if(fabs(ballPosition[i]) > 0.4)
+		if(fabs(ballPosition[i]) > 0.4) {
+			// Reverse velocity
 			ballVelocity[i] = -ballVelocity[i];
-//			ballPosition[i] = ballPosition[i] < 0 ? -0.4 : 0.4;
-//	cout << ballVelocity[0] << ' ' << ballVelocity[1] << ' ' << ballVelocity[2] << endl;
+			// detect collision
+			int k = (i == 0) + (i == 0)*(ballPosition[i] < 0) + (i == 1)*3*(ballPosition[i] < 0);
+			int d = (ballPosition[2] - ballPositionInitial[2])/cubeSize;
+			cout << k << ' ' << d << endl;
+		}
 
 	glutPostRedisplay();
 

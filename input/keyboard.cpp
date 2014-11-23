@@ -24,7 +24,7 @@ void keyboardFunction(unsigned char c, int x, int y) {
 			resetCamera();
 			resetBall();
 			pushBall();
-			glutTimerFunc(64, animation, 64);
+			glutTimerFunc(128, animation, 128);
 		}
 		break;
 	}

@@ -10,10 +10,6 @@
 #include <GL/freeglut.h>
 #include <bits/stdc++.h>
 
-#include "display/display.h"
-#include "input/keyboard.h"
-#include "animation/animate.h"
-
 using namespace std;
 
 extern void displayFunction();

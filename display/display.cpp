@@ -10,12 +10,8 @@
 int depth = 200;
 
 void displayFunction() {
-//	setupLights();
-
 	setupCamera();
-
 	drawWalls(10, depth);
-
 	drawBall();
 
 	if(!gameState)
