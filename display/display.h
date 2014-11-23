@@ -15,13 +15,17 @@ using namespace std;
 #define DISPLAY_H_
 
 extern GLfloat ballPosition[3];
-extern int depth, gameState;
+extern int depth, gameState, length;
 extern double ballSize, coneAngle;
 
 extern void setupCamera();
 extern void drawWalls(int len, int depth);
 extern void drawBall();
 extern void drawCone();
+extern void displayAngles();
+extern void displayScores();
+extern void displayCameraMode();
+extern void displayGameStateText();
 
 void displayFunction();
 

@@ -7,12 +7,23 @@
 
 #include "camera.h"
 
-GLfloat cameraEyeInitial[3] = {-0.25, 0, 0},
+int cameraMode = 0;
+
+GLfloat cameraEyeInitial[3] = {0, 0, 0},
 		cameraCenterInitial[3] = {0, 0, 1};
 
-GLfloat cameraEye[3] = {-0.25, 0, 0},
+GLfloat cameraEye[3] = {0, 0, 0},
 		cameraCenter[3] = {0, 0, 1},
 		cameraUp[3] = {0, 1, 0};
+
+void toggleCameraMode() {
+	if(cameraMode) {
+		cameraUp[0] = cameraUp[2] = 0;
+		cameraUp[1] = 1;
+		cameraCenter[0] = cameraCenter[1] = 0;
+	}
+	cameraMode = 1 - cameraMode;
+}
 
 void resetCamera() {
 	for(int i = 0; i < 3; i++)
@@ -23,7 +34,10 @@ void resetCamera() {
 void setupCamera() {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(45, 640 / 480, 1, 100);
+	if(cameraMode)
+		gluPerspective(45, 640 / 480, 0.5, 100);
+	else
+		gluPerspective(45, 640 / 480, 1, 100);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();

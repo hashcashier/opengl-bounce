@@ -21,8 +21,9 @@ extern void animation(int value);
 extern void resetCamera();
 extern void resetBall();
 extern void pushBall();
+extern void toggleCameraMode();
 
-extern int gameState;
+extern int gameState, scoreRound;
 extern double coneAngleX, coneAngleY;
 extern bool scoring;
 

@@ -13,8 +13,9 @@ void keyboardFunction(unsigned char c, int x, int y) {
 	case ' ':
 		if(gameState == 0) {
 			gameState = 1;
+			scoring = true;
 			pushBall();
-			glutTimerFunc(16, animation, 16);
+			glutTimerFunc(16, animation, 1);
 		}
 		break;
 	case 'r':
@@ -24,8 +25,24 @@ void keyboardFunction(unsigned char c, int x, int y) {
 			resetCamera();
 			resetBall();
 			pushBall();
-			glutTimerFunc(128, animation, 128);
+			scoreRound = 0;
+			glutTimerFunc(16, animation, 4);
 		}
+		break;
+	case 'n':
+	case 'N':
+		if(gameState == 2) {
+			gameState = 0;
+			resetCamera();
+			resetBall();
+			coneAngleX = coneAngleY = 0;
+			scoreRound = 0;
+		}
+		break;
+	case 'c':
+	case 'C':
+		if(gameState == 1)
+			toggleCameraMode();
 		break;
 	}
 	glutPostRedisplay();

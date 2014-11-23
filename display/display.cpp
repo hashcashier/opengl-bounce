@@ -7,15 +7,19 @@
 
 #include "display.h"
 
-int depth = 200;
+int depth = 200, length = 10;
 
 void displayFunction() {
 	setupCamera();
-	drawWalls(10, depth);
+	drawWalls(length, depth);
 	drawBall();
 
 	if(!gameState)
 		drawCone();
+	displayAngles();
+	displayScores();
+	displayCameraMode();
+	displayGameStateText();
 
 	glFlush();
 }

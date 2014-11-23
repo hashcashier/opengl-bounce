@@ -17,8 +17,10 @@ using namespace std;
 
 extern GLfloat cameraEye[3], cameraCenter[3], cameraUp[3];
 extern GLfloat cameraEyeInitial[3], cameraCenterInitial[3];
+extern int cameraMode;
 
 void setupCamera();
 void resetCamera();
+void toggleCameraMode();
 
 #endif /* CAMERA_H_ */

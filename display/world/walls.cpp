@@ -11,10 +11,10 @@ double cubeSize = 0.1;
 int color[500][4][500][3], base[500][500][3];
 
 void drawWalls(int len, int depth) {
-	double sx[] = {0.5, 0.5, -0.5, -0.5};
-	double sy[] = {0.5, -0.5, 0.5, -0.5};
-	double dx[] = {-cubeSize, 0, 0, cubeSize};
-	double dy[] = {0, cubeSize, -cubeSize, 0};
+	double sx[] = {-0.5, 0.5, -0.5, -0.5};
+	double sy[] = {0.5, -0.5, -0.5, -0.5};
+	double dx[] = {cubeSize, 0, 0, cubeSize};
+	double dy[] = {0, cubeSize, cubeSize, 0};
 	double z = 1.5;
 
 	for(int i = 0; i < depth; i++) {
