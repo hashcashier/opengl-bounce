@@ -16,9 +16,9 @@ using namespace std;
 
 void animate(int value);
 extern GLfloat cameraEye[3], cameraCenter[3], cameraUp[3];
-extern GLfloat ballVelocity[3], ballPosition[3], ballPositionInitial[3];
+extern GLfloat ballVelocity[2][3], ballPosition[2][3], ballPositionInitial[2][3];
 extern int color[500][4][500][3], base[500][500][3], bonus[500][4][500];
-extern int gameState, depth, score, scoreLast, scoreRound, cameraMode, currentEffect;
+extern int gameState, depth, score, scoreLast, scoreRound, cameraMode, currentEffect, numBalls;
 extern double cubeSize, ballSize;
 extern bool scoring;
 

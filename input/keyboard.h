@@ -26,6 +26,7 @@ extern void toggleCameraMode();
 extern int gameState, scoreRound, roundNumber, color[500][4][500][3], base[500][500][3], bonus[500][4][500];
 extern double coneAngleX, coneAngleY;
 extern bool scoring;
+extern int currentEffect, numBalls;
 
 
 #endif /* KEYBOARD_H_ */

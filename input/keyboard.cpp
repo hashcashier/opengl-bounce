@@ -26,6 +26,8 @@ void keyboardFunction(unsigned char c, int x, int y) {
 			resetBall();
 			pushBall();
 			scoreRound = 0;
+			currentEffect = 0;
+			numBalls = 1;
 			glutTimerFunc(16, animation, 4);
 		}
 		break;
@@ -41,6 +43,8 @@ void keyboardFunction(unsigned char c, int x, int y) {
 			resetBall();
 			coneAngleX = coneAngleY = 0;
 			scoreRound = 0;
+			currentEffect = 0;
+			numBalls = 1;
 		}
 		break;
 	case 'c':

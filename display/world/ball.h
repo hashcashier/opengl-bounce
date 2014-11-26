@@ -16,7 +16,7 @@ using namespace std;
 
 #define PI 3.14159265
 
-extern GLfloat ballPosition[], ballPositionInitial[], ballVelocity[];
+extern GLfloat ballPosition[2][3], ballPositionInitial[2][3], ballVelocity[2][3];
 extern double ballSize, coneAngleX, coneAngleY;
 extern int currentEffect, numBalls;
 

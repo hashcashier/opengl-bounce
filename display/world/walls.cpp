@@ -26,6 +26,7 @@ void drawWalls(int len, int depth) {
 
 				if(!color[i][k][j][0]) {
 					bonus[i][k][j] = (rand()%100) > 80 ? 1 + rand()%4 : 0;
+//					bonus[i][k][j] = (rand()%100) > 80 ? 2 : 0;
 					for(int q = 0; q < 3; q++)
 						color[i][k][j][q] = 20+rand()%200;
 				}
