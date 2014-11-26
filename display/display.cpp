@@ -20,6 +20,7 @@ void displayFunction() {
 	displayScores();
 	displayCameraMode();
 	displayGameStateText();
+	displayBonusText();
 
 	glFlush();
 }

@@ -32,6 +32,9 @@ void keyboardFunction(unsigned char c, int x, int y) {
 	case 'n':
 	case 'N':
 		if(gameState == 2) {
+			memset(color, 0, sizeof color);
+			memset(base, 0, sizeof base);
+			memset(bonus, 0, sizeof bonus);
 			roundNumber++;
 			gameState = 0;
 			resetCamera();

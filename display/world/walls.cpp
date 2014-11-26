@@ -8,7 +8,7 @@
 #include "walls.h"
 
 double cubeSize = 0.1;
-int color[500][4][500][3], base[500][500][3];
+int color[500][4][500][3], base[500][500][3], bonus[500][4][500];
 
 void drawWalls(int len, int depth) {
 	double sx[] = {-0.5, 0.5, -0.5, -0.5};
@@ -24,9 +24,11 @@ void drawWalls(int len, int depth) {
 				x += dx[k];
 				y += dy[k];
 
-				if(!color[i][k][j][0])
+				if(!color[i][k][j][0]) {
+					bonus[i][k][j] = (rand()%100) > 80 ? 1 + rand()%4 : 0;
 					for(int q = 0; q < 3; q++)
 						color[i][k][j][q] = 20+rand()%200;
+				}
 
 				glPushMatrix();
 				glColor3ub(color[i][k][j][0], color[i][k][j][1], color[i][k][j][2]);

@@ -16,13 +16,14 @@ using namespace std;
 
 extern double coneAngleX, coneAngleY;
 extern GLfloat cameraEye[3], cameraCenter[3], cameraUp[3];
-extern int score, scoreLast, scoreRound, cameraMode, gameState, roundNumber;
+extern int score, scoreLast, scoreRound, cameraMode, gameState, roundNumber, currentEffect;
 
 void displayAngles();
 void printText(double x, double y, string text, int r, int g, int b);
 void displayScores();
 void displayCameraMode();
 void displayGameStateText();
+void displayBonusText();
 
 
 #endif /* HUD_H_ */

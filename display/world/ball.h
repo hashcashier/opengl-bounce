@@ -18,6 +18,7 @@ using namespace std;
 
 extern GLfloat ballPosition[], ballPositionInitial[], ballVelocity[];
 extern double ballSize, coneAngleX, coneAngleY;
+extern int currentEffect, numBalls;
 
 void drawBall();
 void drawCone();

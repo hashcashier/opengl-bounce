@@ -48,6 +48,26 @@ void displayGameStateText() {
 	printText(0.4, 0.1, text, 255, 255, 0);
 }
 
+void displayBonusText() {
+	string bonusText = "";
+	switch (currentEffect) {
+	case 1:
+		bonusText = "3X Score";
+		break;
+	case 2:
+		bonusText = "Two Balls";
+		break;
+	case 3:
+		bonusText = "Black Ball";
+		break;
+	case 4:
+		bonusText = "Doomed (No Score)";
+		break;
+	}
+	if(bonusText != "")
+		printText(0.4, 0.05, bonusText, 255, 0, 255);
+}
+
 void printText(double x, double y, string text, int r = 255, int g = 255, int b = 255) {
 	glColor3ub(r, g, b);
 	glRasterPos3f(x, y, cameraCenter[2]+0.1);

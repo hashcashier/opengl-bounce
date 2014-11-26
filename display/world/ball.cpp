@@ -7,6 +7,8 @@
 
 #include "ball.h"
 
+int numBalls = 1;
+
 GLfloat ballPosition[3] = {0, 0, 1.5};
 GLfloat ballPositionInitial[3] = {0, 0, 1.5};
 GLfloat ballVelocity[] = {0, 0, 0.04};
@@ -26,7 +28,10 @@ void pushBall() {
 
 void drawBall() {
 	glPushMatrix();
-	glColor3ub(240, 240, 240);
+	if(currentEffect != 3)
+		glColor3ub(240, 240, 240);
+	else
+		glColor3ub(0, 0, 0);
 	glTranslated(ballPosition[0], ballPosition[1], ballPosition[2]);
 	glutWireSphere(ballSize, 20, 20);
 	glPopMatrix();

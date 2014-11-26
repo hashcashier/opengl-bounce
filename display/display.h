@@ -26,6 +26,7 @@ extern void displayAngles();
 extern void displayScores();
 extern void displayCameraMode();
 extern void displayGameStateText();
+extern void displayBonusText();
 
 void displayFunction();
 

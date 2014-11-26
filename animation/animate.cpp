@@ -7,7 +7,7 @@
 
 #include "animate.h"
 
-int gameState = 0, score = 0, scoreLast = 0, scoreRound = 0;
+int gameState = 0, score = 0, scoreLast = 0, scoreRound = 0, currentEffect = 0;
 bool scoring = false;
 
 void animation(int value) {
@@ -51,7 +51,25 @@ void animation(int value) {
 			int j = ballPosition[(i+1)%2]*10 + 5;
 //			cout << k << ' ' << d << ' ' << j << endl;
 			scoreLast = (color[d][k][j][0]-color[d][k][j][1])*max(1, color[d][k][j][2]/40);
-			scoreRound += scoreLast;
+
+			if(bonus[d][k][j])
+				currentEffect = bonus[d][k][j];
+
+			if(currentEffect == 1)
+				scoreRound += 3*scoreLast;
+			else if(currentEffect != 4)
+				scoreRound += scoreLast;
+
+			switch(currentEffect) {
+			case 1: // 3X Score
+				break;
+			case 2: // two balls
+				break;
+			case 3: // black ball
+				break;
+			case 4: // doomed
+				break;
+			}
 		}
 
 	glutPostRedisplay();
