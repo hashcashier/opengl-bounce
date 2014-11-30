@@ -23,6 +23,7 @@ void toggleCameraMode() {
 		cameraCenter[0] = cameraCenter[1] = 0;
 	}
 	cameraMode = 1 - cameraMode;
+	glutPostRedisplay();
 }
 
 void resetCamera() {

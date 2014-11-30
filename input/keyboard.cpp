@@ -49,7 +49,7 @@ void keyboardFunction(unsigned char c, int x, int y) {
 		break;
 	case 'c':
 	case 'C':
-		if(gameState == 1)
+		if(gameState == 1 || cameraMode)
 			toggleCameraMode();
 		break;
 	}

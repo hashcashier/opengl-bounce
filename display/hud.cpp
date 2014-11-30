@@ -58,10 +58,10 @@ void displayBonusText() {
 		bonusText = "Two Balls";
 		break;
 	case 3:
-		bonusText = "Black Ball";
+		bonusText = "No More Bonuses";
 		break;
 	case 4:
-		bonusText = "Doomed (No Score)";
+		bonusText = "Doomed For Now (No Score)";
 		break;
 	}
 	if(bonusText != "")
@@ -70,6 +70,8 @@ void displayBonusText() {
 
 void printText(double x, double y, string text, int r = 255, int g = 255, int b = 255) {
 	glColor3ub(r, g, b);
+	if(cameraMode)
+		return;
 	glRasterPos3f(x, y, cameraCenter[2]+0.1);
 	for(int i = 0; i < (int) text.length(); i++)
 		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, text[i]);

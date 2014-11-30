@@ -24,14 +24,14 @@ void resetBall() {
 void pushBall() {
 	ballVelocity[0][0] = 0.04*sin(PI*coneAngleY/180);
 	ballVelocity[0][1] = -0.04*sin(PI*coneAngleX/180);
-	ballVelocity[0][2] = 0.04*cos(PI*coneAngleY/180);
+	ballVelocity[0][2] = 0.04*cos(PI*coneAngleY/180)*cos(PI*coneAngleX/180);
 }
 
 void drawBall() {
 	for(int b = 0; b < numBalls; b++) {
 		glPushMatrix();
 		if(b == 1)
-			glColor3ub(240, 0, 240);
+			glColor3ub(240, 240, 0);
 		else if(currentEffect != 3)
 			glColor3ub(240, 240, 240);
 		else

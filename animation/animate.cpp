@@ -54,7 +54,7 @@ void animation(int value) {
 	//			cout << k << ' ' << d << ' ' << j << endl;
 				scoreLast = (color[d][k][j][0]-color[d][k][j][1])*max(1, color[d][k][j][2]/40);
 
-				int effect = bonus[d][k][j];
+				int effect = bonus[d][k][j]*(currentEffect != 3);
 
 				if(effect == 2 && effect != currentEffect) {
 					numBalls = 2;
